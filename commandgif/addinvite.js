@@ -1,31 +1,30 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const moment = require('moment');
-var config = require('../config.json');
 
-exports.run = async (client, message, args, msg) => {
+const { Client, Collection, MessageEmbed } = require(`discord.js`);
+const { 
+  PREFIX, 
+} = require(`../config.json`);
 
-const embed = new Discord.MessageEmbed()
-    
-.setColor('RANDOM') 
-.setThumbnail(message.author.avatarURL({dynamic: "true"}))
-.setFooter(`Requested by ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
-.setAuthor(`Gif Invite`)
-.setImoge (`https://images-ext-1.discordapp.net/external/mYylpyqnCG0imci8zLHG7UE1Vropu-z4wv0S-adYedo/https/media.discordapp.net/attachments/848121416696070164/848210376364654602/image0.gif `)
-.setDescription(`**[INVITES](https://discord.com/api/oauth2/authorize?client_id=772052634604404766&permissions=8&scope=bot) INVITE TO PORE BOT **`)
-    
-message.channel.send({embed});
-}
+  
 
-exports.conf = {
-enabled: true,
-guildOnly: false,
-aliases: ['add'],
-permLevel: 0
-};
 
-exports.help = {
-  name: 'add',
-  description: 'rexuss',
-  usage: 'a'
+module.exports = {
+  name: "add",
+  aliases: ["a"],
+  cooldown: 8,
+  description: "** Invite pore bot**",
+  execute(message) {
+    let commands = message.client.commands.array();
+
+    let helpEmbed = new MessageEmbed()
+    .setThumbnail(``)
+    .setImage(`https://media.discordapp.net/attachments/848121416696070164/848210376364654602/image0.gif`)
+    .setTitle(`Pore is One`)
+    .setDescription(` [  invite  ](https://discord.com/api/oauth2/authorize?client_id=784303756925468713&permissions=8&scope=bot)***< invite to pore bot >***`)
+
+   .setFooter(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+   .setColor("RANDOM")
+   message.react("<a:emoji_27:847407354005291018>")
+    return message.channel.send(helpEmbed).catch(console.error);
+
+  }
 };
