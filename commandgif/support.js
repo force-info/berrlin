@@ -13,7 +13,7 @@ const embed = new Discord.MessageEmbed()
 .setDescription(`
 [Invite Me](https://discord.com/api/oauth2/authorize?client_id=784304843807391755&permissions=8&scope=bot)
 -
-[Support Server]()
+[Support Server](https://discord.gg/wMhJcPT7)
 `)
 .setFooter(`Requested by ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))    
 message.channel.send({embed});
