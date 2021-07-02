@@ -10,7 +10,7 @@ const embed = new Discord.MessageEmbed()
 .setColor(`RANDOM`)
 .setThumbnail(message.author.avatarURL({dynamic: "true"}))
 .setTitle(`**Links**`)
-.setImoge(`https://media.discordapp.net/attachments/860507919799549962/860507957800468490/image0.png`)
+.setImage(`https://media.discordapp.net/attachments/860507919799549962/860507957800468490/image0.png`)
 .setDescription(`
 [Invite Me](https://discord.com/api/oauth2/authorize?client_id=784303756925468713&permissions=8&scope=bot)
 -
