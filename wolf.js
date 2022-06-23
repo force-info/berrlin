@@ -127,7 +127,7 @@ Revenge.send(new Discord.Attachment(RevengePP))
 
 
 client.on("guildCreate", guild => {
-  let channel = client.channels.cache.get("858335920499589140");
+  let channel = client.channels.cache.get("989442119146024960");
   let embed = new MessageEmbed().setColor("#ff0000")
   .setAuthor(client.user.username, client.user.avatarURL())
   .setTitle( `✅ Join Server`)
@@ -140,7 +140,7 @@ client.on("guildCreate", guild => {
 });
 
 client.on("guildDelete", guild => {
-  let channel = client.channels.cache.get("857172973073203210");
+  let channel = client.channels.cache.get("989442096387727390");
   let embed = new MessageEmbed()
   .setColor("RANDOM")
   .setAuthor(client.user.username, client.user.avatarURL())
@@ -153,6 +153,6 @@ client.on("guildDelete", guild => {
   channel.send(embed);
 });
 
-//------------------------ kakwolf Random Gif Pp -----------------------//
-//------------------------ kakwolf Random Gif Pp -----------------------//
+//------------------------ Mapxor Random Gif Pp -----------------------//
+//------------------------Mapxor Random Gif Pp -----------------------//
 //------------------------ kakwolf Random Gif Pp -----------------------//
