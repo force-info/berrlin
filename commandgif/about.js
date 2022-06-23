@@ -18,7 +18,7 @@ const embed = new Discord.MessageEmbed()
 .addField('My Name' , `\`${client.user.tag}\`` , true)
 .addField('My ID' , `\`${client.user.id}\`` , true)
 .addField('My Ping' , `\`${client.ws.ping}\`` , true)
-.addField('Owner Bot' , `<@743887896481628190> ` , true)
+.addField('Owner Bot' , `<@ 980035463089901600 > ` , true)
 message.channel.send({embed});
 }
 
