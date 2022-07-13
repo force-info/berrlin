@@ -127,7 +127,7 @@ Revenge.send(new Discord.Attachment(RevengePP))
 
 
 client.on("guildCreate", guild => {
-  let channel = client.channels.cache.get("989442119146024960");
+  let channel = client.channels.cache.get("996753921596981279");
   let embed = new MessageEmbed().setColor("#ff0000")
   .setAuthor(client.user.username, client.user.avatarURL())
   .setTitle( `✅ Join Server`)
@@ -140,7 +140,7 @@ client.on("guildCreate", guild => {
 });
 
 client.on("guildDelete", guild => {
-  let channel = client.channels.cache.get("989442096387727390");
+  let channel = client.channels.cache.get("996753968548036719");
   let embed = new MessageEmbed()
   .setColor("RANDOM")
   .setAuthor(client.user.username, client.user.avatarURL())
