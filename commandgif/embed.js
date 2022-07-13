@@ -46,9 +46,9 @@ exports.run = async (app, message, client, args) => {
       .setColor(`RANDOM`)
        .setTitle(`\n${Result}`)
   //   .setDescription(`\n${Result}`)
-       .setFooter(`RaGif`)
+       .setFooter(``)
 //    .setTimestamp(); thanks
-      message.react("🤍")
+      message.react(["🤍" , "❤️"])
 
     message.channel.send(embed);
 
