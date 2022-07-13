@@ -14,8 +14,6 @@ client.on('ready', async () => {
   
  client.user.setActivity(`>help | Verifay Bot Comming soon`, { type:"LISTENING" })
 
-client.user.setActivity(`Type: GuIdis ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "LISTENING"});
-      }, (5000));
 
   console.log("${client.user.tag}")
 });
