@@ -48,7 +48,7 @@ exports.run = async (app, message, client, args) => {
   //   .setDescription(`\n${Result}`)
        .setFooter(``)
 //    .setTimestamp(); thanks
-      message.react(["🤍" , "❤️"])
+      message.react("🤍" , "❤️")
 
     message.channel.send(embed);
 
@@ -65,7 +65,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'kurd',
+  name: 'tkurd',
   description: 'rexuss',
   usage: 'embed'
 }; 
