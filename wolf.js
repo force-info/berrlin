@@ -14,6 +14,7 @@ client.on('ready', async () => {
   
  client.user.setActivity(`>help servers ${client.guilds.cache.size} | Verifay Bot coming soon`, { type:"LISTENING" })
 
+ client.user.setActivity(` help my `, { type:"LISTENING" })
 
   console.log("${client.user.tag}")
 });
