@@ -12,7 +12,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`>help | Verifay Bot Comming soon`, { type:"LISTENING" })
+ client.user.setActivity(`>help servers ${client.guilds.cache.size} | Verifay Bot coming soon`, { type:"LISTENING" })
 
 
   console.log("${client.user.tag}")
