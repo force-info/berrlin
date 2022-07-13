@@ -15,7 +15,7 @@ exports.run = async (app, message, client, args) => {
 
     message.channel.send(replies[result]).then(message => {
 			message.react('🥺').then(r => {
-				message.react('🖤');
+				message.react('<a:heartblack:996849798554599454>');
            });
           });
       }
