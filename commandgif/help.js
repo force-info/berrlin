@@ -12,17 +12,14 @@ const embed = new Discord.MessageEmbed()
 .setFooter(`Requested by ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 .setAuthor(`Gif Help`)
 .setDescription(`
-**Info Commands**
-\`avatar\` - \`about\` - \`ping\`
-\`invite\` - \`server\` - \`support\`
 
-**Gifs Commands**
-\`boy\` - \`girl\` - \`baby\`
-\`neon\` - \`sad\` - \`smoking\`
-\`animal\` - \`anime\` - \`cuople\`
-\`emoji\`
-** Photo Commands **
-\`pboy\` -\`pgirl
+**__Info Commands__**
+avatar - about -  ping- invite - server - support
+**__Gifs Commands__**
+boy - girl - baby - neon - sad - smoking
+animal - anime - couple - emoji
+**__Photo Commands__**
+ pboy - pgirl
 
 
 **Links**
