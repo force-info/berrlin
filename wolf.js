@@ -12,7 +12,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`>help Gif Vip ✨| Verifay Bot coming soon`, { type:"LISTENING" })
+ client.user.setActivity(`>help Gif Vip ✨| Verified Bot ☑️`, { type:"LISTENING" })
 
   console.log("${client.user.tag}")
 });
