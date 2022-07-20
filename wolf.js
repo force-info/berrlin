@@ -161,6 +161,13 @@ client.on("guildDelete", guild => {
 
 
 
+client.on('message', message => {
+    if (message.content.startsWith(PREFIX + 'say')) {
+  if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send("Do You Not Have Premission Adminstrator")
+   var say = message.content.split(" ").slice(1).join(" ");
+    if(!say) return message.reply("**Please Type Message For say**")
+        message.channel.send(say);
+}
 
 
 /// Code banner 
