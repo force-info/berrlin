@@ -6,9 +6,6 @@ const config = require('./config.json');
 const app = express();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const disbut = require('discord-buttons')
-disbut(client)
-const { MessageMenuOption, MessageMenu } = require("discord-buttons");
 client.on('ready', async () => {
    client.appInfo = await client.fetchApplication();
   setInterval( async () => {
