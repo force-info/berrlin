@@ -1,3 +1,5 @@
+const discord = require ("discord.js"
+
 async execute(message, args) {
         if (!message.member.hasPermission('BAN_MEMBERS')) {
             return message.channel.send(`You are unable to ban members`)
