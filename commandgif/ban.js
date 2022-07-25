@@ -16,3 +16,15 @@ async execute(message, args) {
 
     }
 }
+exports.conf = {
+enabled: true,
+guildOnly: false,
+aliases: ['about'],
+permLevel: 0
+};
+
+exports.help = {
+  name: 'about',
+  description: 'rexuss',
+  usage: 'stats'
+};
