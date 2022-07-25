@@ -127,32 +127,55 @@ Revenge.send(new Discord.Attachment(RevengePP))
 }) 
 
 
-client.on("guildCreate", guild => {
-  let channel = client.channels.cache.get("996753921596981279");
-  let embed = new MessageEmbed().setColor("#ff0000")
-  .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle( `✅ Join Server`)
-  .addField("🔠 **Server Name**", `${guild.name}`)
-  .addField("👑 **Server Owner**", `${guild.owner}`)
-  .addField("🆔 **Server Id**", `${guild.id}`)
-  .addField("👥 **Member Count**", `${guild.memberCount}`)
-  .setFooter(`${client.user.tag}`);
-  channel.send(embed);
+
+client.on('message', async message => {
+if(message.content.startsWith(PREFIX + 'mute')) {
+let mention = message.mentions.members.first();
+let role = message.guild.roles.cache.find(ro => ro.name == 'Muted');
+ 
+if (!message.guild.me.hasPermission('MANAGE_ROLES')) {
+        const embed = new Discord.MessageEmbed()
+.setThumbnail(client.user.avatarURL())
+.setColor("#9700ff")
+.setTitle("Error ❌")
+.setDescription("** I don't have permission`MANAGE_ROLES` **")
+.setFooter(client.user.username,client.user.avatarURL())
+message.channel.send(embed);
+};
+if (!message.member.hasPermission('MANAGE_GUILD')) {
+    const embed = new Discord.MessageEmbed()
+.setThumbnail(client.user.avatarURL())
+.setColor("#ff0000")
+.setTitle("Error ❌")
+.setDescription(`** you don't have permissionMANAGE_GUILD**`)
+.setFooter(client.user.username,client.user.avatarURL())
+message.channel.send(embed);
+};
+ 
+let muteRole = message.guild.roles.cache.find(ro => ro.name == 'Muted');
+if (!muteRole) {
+    return message.channel.send("** I don't found role `Muted`**")
+};
+ 
+if(!mention) return message.channel.send(`**Ex : ${PREFIX}mute @user**`);
+message.guild.channels.cache.forEach(c => {
+c.updateOverwrite(role , {
+SEND_MESSAGES: false, 
+ADD_REACTIONS: false
+});
+});//////All codes by robot.probot we are a robot
+mention.roles.add(role)
+const embed = new Discord.MessageEmbed()
+.setThumbnail(mention.user.avatarURL())
+.setColor("#9700ff")
+.setTitle("Done ✅")
+.setDescription(`**muted ${mention.user.username}**`)
+.setFooter(`by ${message.author.username}`)
+message.channel.send(embed)
+}
 });
 
-client.on("guildDelete", guild => {
-  let channel = client.channels.cache.get("996753968548036719");
-  let embed = new MessageEmbed()
-  .setColor("RANDOM")
-  .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle( `❌ Left Server`)
-  .addField("🔠 **Server Name**", `${guild.name}`)
-  .addField("👑 **Server Owner**", `${guild.owner}`)
-  .addField("🆔 **Server Id**", `${guild.id}`)
-  .addField("👥 **Member Count**", `${guild.memberCount}`)
-  .setFooter(`${client.user.tag}`);
-  channel.send(embed);
-});
+
 
 //------------------------ Mapxor Random Gif Pp -----------------------//
 //------------------------Mapxor Random Gif Pp -----------------------//
