@@ -1,4 +1,4 @@
-const discord = require ("discord.js"
+const Discord = require ("discord.js"
 
 async execute(message, args) {
         if (!message.member.hasPermission('BAN_MEMBERS')) {
