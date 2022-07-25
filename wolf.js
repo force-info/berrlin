@@ -129,7 +129,7 @@ Revenge.send(new Discord.Attachment(RevengePP))
 
 
 client.on('message', async message => {
-if(message.content.startsWith(PREFIX + 'mute')) {
+if(message.content.startsWith('>mute')) {
 let mention = message.mentions.members.first();
 let role = message.guild.roles.cache.find(ro => ro.name == 'Muted');
  
@@ -157,7 +157,7 @@ if (!muteRole) {
     return message.channel.send("** I don't found role `Muted`**")
 };
  
-if(!mention) return message.channel.send(`**Ex : ${PREFIX}mute @user**`);
+if(!mention) return message.channel.send(`**Ex : >mute @user**`);
 message.guild.channels.cache.forEach(c => {
 c.updateOverwrite(role , {
 SEND_MESSAGES: false, 
