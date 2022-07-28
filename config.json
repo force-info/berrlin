@@ -1,5 +1,5 @@
 {
-  "prefix": ">",
-  "sahip": "743887896481628190",
-  "token": "OTE2Nzc2NDgzMzY2NzcyNzU2.GlE-fF.8AsBbohBOuDfi60LyiedHFeYFbdvHMIhZT8pHg"
+  "prefix": "Your Bot Prefix",// prefix
+  "sahip": "Owner Id", //owner ID 
+  "token": "Your Bot Token" //Token Bot
 }
