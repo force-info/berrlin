@@ -104,10 +104,7 @@ client.elevation = message => {
 };
 client.login(config.token)
 
-
-//------------------------ kakwolf Random Gif Pp -----------------------//
-//------------------------ kakwolf Random Gif Pp -----------------------//
-//------------------------ kakwolf Random Gif Pp -----------------------//
+//bot
 
 client.on("userUpdate", async(Revenge, NYKS) => {
   
