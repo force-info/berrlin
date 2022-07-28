@@ -1,1 +1,1 @@
-# **Bot Gifs By Wolf V12**
+# **Bot Gifs and texts coder By MapXor V12**
